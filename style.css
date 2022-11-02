@@ -1,0 +1,246 @@
+:root{
+    --myGreen: rgb(58, 147, 48);
+    background-color: rgb(54, 54, 54);
+}
+/* Phone */
+@media screen and (max-width: 480px){
+    body{
+        margin: 0px;
+        display: grid;
+        grid-template-areas: 'header'
+                            'side'
+                            'body'
+                            'foot';
+    }
+
+    video {
+        width: 100%;
+    }
+
+    #game-board{
+        grid-area: body;
+        /* padding: 10px; */
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        width: 100%;
+        display: grid;
+        /* margin: auto; */
+        /* grid-template-columns: 33% 33% 33%; */
+        grid-template-areas: 'rock' 
+                            'paper'
+                            'scissors'
+                            'user'
+                            'comp'
+                            'results';
+    }
+    
+}
+/* Tablet */
+@media screen and (min-width: 481px) {
+    body{
+        margin: 0px;
+        display: grid;
+        /* grid-template-columns: 1fr 2fr 1fr; */
+        grid-template-areas: 'header header header'
+                            'body body body'
+                            'side side side'
+                            'game game game'
+                            'foot foot foot';
+
+        font-size:x-large;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    video {
+        width: 100%;
+    }
+
+    #game-board{
+        grid-area: body;
+        padding: 0px;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        width: 100%;
+        display: grid;
+        /* justify-content: space-evenly; */
+        margin: auto;
+        grid-area: game;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 'rock paper scissors'
+                            'user . comp'
+                            '. results .';
+        /* margin-left: 0px;
+        margin-right: 0px; */
+    }
+}
+/* Desktop */
+@media screen and (min-width: 913px){
+    body{
+        margin: 0px;
+        display: grid;
+        /* grid-template-columns: 1fr 2fr 1fr; */
+        grid-template-areas: 'header header header header'
+                            'body body body side'
+                            'game game game game'
+                            'foot foot foot .';
+    }
+
+    /* #body {
+        display: flex;
+    } */
+
+    #game-board{
+        grid-area: body;
+        /* padding: 10px; */
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        width: 100%;
+        display: grid;
+        /* margin: auto; */
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 'rock paper scissors'
+                            'user . comp'
+                            '. results .';
+        grid-area: game;
+    }
+}
+.header-section-ind{
+    background-color: var(--myGreen);
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
+    grid-area: header;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-section{
+    background-color: var(--myGreen);
+    color: white;
+    text-align: left;
+    padding: 3px 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
+    grid-area: header;
+    text-decoration: none;
+    display: grid;
+    grid-template-areas: 'head image'
+                        'nav image';
+    /* flex-direction: row;
+    justify-content: space-between; */
+
+}
+
+#logo {
+    width: 95%;
+    padding: 0%;
+    margin: 0%;
+}
+
+#logo-2 {
+    width: 40%;
+    /* align-self: flex-end; */
+    grid-area: image;
+    justify-self: end;
+}
+
+#page-header {
+    /* justify-self: center; */
+}
+
+#nav-bar {
+    grid-area: nav;
+}
+
+#header-link {
+    text-decoration: none;
+    color: white;
+    grid-area: head;
+}
+
+#nav-bar > a {
+    text-decoration: none;
+    padding: 5px;
+    color: white;
+}
+
+#nav-bar > a:hover {
+    /* text-decoration: none;
+    padding: 5px; */
+    background-color: green;
+}
+
+#body {
+    grid-area: body;
+    background-color: rgb(66, 66, 66);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0;
+    padding-bottom: 5px;
+    color: white;
+}
+
+
+
+.game-button {
+    border: 1px solid black;
+    padding: 15px;
+    background-color: whitesmoke;
+   
+}
+
+.rps-img {
+    width: 33%;
+    margin: 0px;
+    padding: 0px;
+}
+
+#rock {
+    grid-area: rock;
+}
+#paper {
+    grid-area: paper;
+}
+#scissors {
+    grid-area: scissors;
+}
+#user-choice {
+    text-align: center;
+    grid-area: user;
+}
+#comp-choice {
+    text-align: center;
+    grid-area: comp;
+}
+#results {
+    text-align: center;
+    grid-area: results;
+}
+
+aside {
+    grid-area: side;
+    /* background-color: rgb(147, 105, 185); */
+    padding: 10px;
+}
+
+footer {
+    grid-area: foot;
+    background-color: rgb(58, 58, 58);
+    padding: 10px;
+    font-size: small;
+    color: white;
+    /* grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: 4; */
+}
+cite {
+    font-size: small;
+    color: white;
+}
+cite > a {
+    color: lightblue;
+}
+
